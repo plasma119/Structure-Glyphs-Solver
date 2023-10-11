@@ -186,14 +186,13 @@ export default class Structure {
                     best = r;
             });
             answer = `${best[0].code[0]}${best.map((glyph) => glyph.code[1]).join('')}`;
-            if (!mute)
+            if (!mute) {
                 this.output(`Best result: ${answer}`);
-            if (!mute)
                 this.output(`Possible results:`);
-            results.forEach((r) => {
-                if (!mute)
-                    this.output(`${r[0].code[0]}${r.map((glyph) => glyph.code[1]).join('')}`);
-            });
+                let arr = results.map((r) => `${r[0].code[0]}${r.map((glyph) => glyph.code[1]).join('')}`);
+                arr.sort((a, b) => b.length - a.length);
+                arr.forEach((a) => this.output(a));
+            }
         }
         if (!mute)
             this.output(`Computation cost: ${computeCost}`);
