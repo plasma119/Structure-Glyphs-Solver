@@ -1,0 +1,17 @@
+{
+  "name": "structure-glyphs-solver",
+  "version": "0.1.0",
+  "description": "glyphs solver for idle game Structure",
+  "main": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "private": true,
+  "author": "Rabbit",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
